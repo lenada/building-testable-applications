@@ -9,6 +9,15 @@ env: DB=postgres
 before_script: 
   - "psql -c 'create database ibl_stats;' -U postgres"
   - cd tests
-  
-script: phpunit MainPageViewTest.php
+  - php create_franchise_map.php
+  - php create_franchises_for_standings.php
+  - php create_games_for_results.php
+  - php create_games_for_standings.php
+  - php create_games_week_27.php
+  - php create_playoff_games_for_standings.php
+  - php create_raw_schedules_week_27.php
+  - php create_rotations_week_24.php
+  - php create_rotations_week_27.php
+
+script: phpunit .
 

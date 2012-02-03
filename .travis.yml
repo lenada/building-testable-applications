@@ -7,8 +7,7 @@ php:
 env: DB=postgres
 
 before_script: 
-  #- wget http://getcomposer.org/composer.phar
-  #- php composer.phar install
+  - "psql -c 'create database ibl_stats;' -U postgres"
   - cd tests
 script: phpunit RotationMapperTest.php
 

@@ -16,7 +16,7 @@ class ScheduleMapper
         }
 
         // Load our class mapper from the XML config file
-        $fields = simplexml_load_file(LIB_ROOT . 'ibl/maps/schedule.xml');
+        $fields = simplexml_load_file(LIB_ROOT . 'IBL/maps/schedule.xml');
 
         foreach ($fields as $field) {
             $this->_map[(string)$field->name] = $field; 

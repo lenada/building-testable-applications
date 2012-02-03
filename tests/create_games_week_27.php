@@ -1,7 +1,8 @@
 <?php
 include 'test_bootstrap.php';
 
-$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'stats', 'st@ts=Fun'); 
+$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'postgres', '');
+
 echo "Collecting all games for week 27...\n";
 $gameMapper = new \IBL\GameMapper($conn);
 $allGames = $gameMapper->findByWeek(27);

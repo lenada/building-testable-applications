@@ -1,7 +1,8 @@
 <?php
 include 'test_bootstrap.php';
 
-$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'stats', 'st@ts=Fun'); 
+$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'postgres', '');
+
 echo "Collecting raw schedules for week 27...\n";
 $mapper = new \IBL\ScheduleMapper($conn);
 $rawSchedules = $mapper->findByWeek(27);

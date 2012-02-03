@@ -1,7 +1,8 @@
 <?php
 include 'test_bootstrap.php';
 
-$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'stats', 'st@ts=Fun'); 
+$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'postgres', '');
+
 echo "Collecting rotations for week 27...\n";
 $mapper = new \IBL\RotationMapper($conn);
 $rotations = $mapper->findByWeek(27);

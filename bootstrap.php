@@ -25,7 +25,8 @@ $container = new \Pimple();
 $container['db_connection'] = function ($c) {
     return new \PDO(
         'pgsql:host=localhost;dbname=ibl_stats', 
-        'stats',
-        'st@ts=Fun'
+        'postgres',
+        ''
     );
+
 };

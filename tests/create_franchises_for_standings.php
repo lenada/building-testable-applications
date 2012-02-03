@@ -1,7 +1,8 @@
 <?php
 include 'test_bootstrap.php';
 
-$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'stats', 'st@ts=Fun'); 
+$conn = new PDO('pgsql:host=localhost;dbname=ibl_stats', 'postgres', '');
+
 echo "Collecting all games in our season...\n";
 $mapper = new \IBL\FranchiseMapper($conn);
 $allFranchises = $mapper->findAll();
